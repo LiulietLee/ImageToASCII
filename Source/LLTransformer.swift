@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol LLTransformerDelegate {
-    func convertFinished()
+    func convertFinished(text: String)
 }
 
 class LLTransformer {
@@ -91,7 +91,7 @@ class LLTransformer {
         }
         
         if delegate != nil {
-            delegate!.convertFinished()
+            delegate!.convertFinished(stringValue)
         }
         
         return stringValue

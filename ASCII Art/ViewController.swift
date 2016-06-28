@@ -25,10 +25,9 @@ class ViewController: UIViewController, LLTransformerDelegate {
         label.text = text
     }
     
-    func convertFinished() {
-        self.title = "Converted"
-        print("convert finished")
+    func convertFinished(text: String) {
+        print(text)
     }
-
+    
 }
 
