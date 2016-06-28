@@ -23,21 +23,21 @@ The **convertUIImageToText(image: UIImage, clarity: Int) -> String** function re
 
 ## Delegation
 You can add the **LLTransformerDelegate**.
-There is one function called **convertFinished()** with no arguement, no return value. It will be executed when convert finished.
+There is one function called **convertFinished(text: String)** with one arguement called text, which is the converted text. It will be executed when convert finished.
 
 ```
 class ViewController: UIViewController, LLtransformerDelegate {
   ...
-  let tf = LLTransformer()
+  let transformer = LLTransformer()
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    tf.delegate = self
+    transformer.delegate = self
     ...
   }
   
-  func convertFinished() {
-    // do something cool
+  func convertFinished(text: String) {
+    print(text)   // or some other cool things
   }
   ...
 }
