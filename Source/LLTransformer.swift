@@ -17,13 +17,6 @@ class LLTransformer {
     
     var delegate: LLTransformerDelegate?
     
-    private func convertUIImageToCGImage(image: UIImage) -> CGImage {
-        let ciimage = CIImage(image: image)!
-        let context = CIContext(options: nil)
-        let cgimage = context.createCGImage(ciimage, fromRect: ciimage.extent)
-        return cgimage
-    }
-    
     ///
     /**
      
@@ -43,7 +36,7 @@ class LLTransformer {
         let underNumOfHeight = clarity * 2
         
         var stringValue = ""
-        let cgimage = convertUIImageToCGImage(image)
+        let cgimage = image.CGImage
         let imageWidth = CGImageGetWidth(cgimage)
         let imageHeight = CGImageGetHeight(cgimage)
         
