@@ -9,14 +9,8 @@
 import Foundation
 import UIKit
 
-protocol LLTransformerDelegate {
-    func convertFinished(_ text: String)
-}
-
 class LLTransformer {
-    
-    var delegate: LLTransformerDelegate?
-    
+
     ///
     /**
      
@@ -74,10 +68,6 @@ class LLTransformer {
                 }                
             }
             stringValue += "\n"
-        }
-        
-        if delegate != nil {
-            delegate!.convertFinished(stringValue)
         }
         
         return stringValue

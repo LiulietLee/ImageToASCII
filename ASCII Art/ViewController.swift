@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, LLTransformerDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     
@@ -17,17 +17,12 @@ class ViewController: UIViewController, LLTransformerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        transformer.delegate = self
-        
         self.title = "Converting"
         let image = UIImage(named: "bilibili.jpg")!
         let text = transformer.convertUIImageToText(image: image, clarity: 98)
         label.text = text
-    }
-    
-    func convertFinished(_ text: String) {
         print(text)
     }
-    
+
 }
 
