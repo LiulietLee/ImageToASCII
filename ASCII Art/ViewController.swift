@@ -12,7 +12,7 @@ class ViewController: UIViewController, LLTransformerDelegate {
 
     @IBOutlet weak var label: UILabel!
     
-    private let transformer = LLTransformer()
+    fileprivate let transformer = LLTransformer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class ViewController: UIViewController, LLTransformerDelegate {
         label.text = text
     }
     
-    func convertFinished(text: String) {
+    func convertFinished(_ text: String) {
         print(text)
     }
     
