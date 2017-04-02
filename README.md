@@ -1,5 +1,5 @@
 # ImageToASCII
-A little stuff about transforming an image to ASCII characters written by Swift.
+A model about transforming an image to ASCII characters written by Swift.
 
 ![](https://cloud.githubusercontent.com/assets/9763162/16355549/2a4a717e-3aec-11e6-8057-ffd03f86a08b.jpg)
 ![](https://cloud.githubusercontent.com/assets/9763162/16355556/70f8cdf0-3aec-11e6-91a8-a088dca788b9.jpg)
@@ -8,7 +8,7 @@ A little stuff about transforming an image to ASCII characters written by Swift.
 Just move the "Source/LLTransformer.swift" to your project.
 
 ## Usage
-You can download this project to see the sample example.
+You can download this project to see the simple example.
 
 ```
 let transformer = LLTransformer()
